@@ -1,0 +1,38 @@
+.showcase{
+    padding: 50px;
+    background-color: rgb(30, 12, 6, 1);
+    width: 90%;
+    margin-right: 10%;
+    border-radius: 0 30px 30px 0;
+    box-shadow: 0px 4px 52px 0px rgba(245, 245, 245, 0.17);
+}
+.right_type{
+    animation: animation_for_right 1s linear forwards;
+}
+.left_type{
+    animation: animation_for_left ease-in forwards;
+    animation-timeline: view();
+    animation-range-start: 0px;
+    animation-range-end: 500px;
+}
+@keyframes animation_for_left{
+    from{
+        transform: translateX(-120%);
+        opacity: 0;
+    }
+    50%{opacity: 0.4;}
+    to{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+@keyframes animation_for_right{
+    from{
+        transform: translateX(120%);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
